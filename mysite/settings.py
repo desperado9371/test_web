@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_jenkins',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,12 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 ALLOWED_HOSTS = ['127.0.0.1', '13.125.216.221']
+
+PROJECT_APPS =(
+        'MyApp'
+        )
+
+JENKINS_TASKS = (
+        'django_jenkins.tasks.run_pep8',
+        'django_jenkins.tasks.run_pyflakes'
+        )
